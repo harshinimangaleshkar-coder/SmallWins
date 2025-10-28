@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Small Wins 🌱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Small Wins 🌱</h1>
+    <p class="subtitle">Remember what mattered, when it mattered.</p>
+
+    <form id="winForm">
+      <input type="text" id="winInput" placeholder="What did you accomplish?" required />
+      <select id="category">
+        <option value="Work">Work</option>
+        <option value="School">School</option>
+        <option value="Personal">Personal</option>
+        <option value="Career">Career Prep</option>
+      </select>
+      <select id="impact">
+        <option value="1">⭐</option>
+        <option value="2">⭐⭐</option>
+        <option value="3" selected>⭐⭐⭐</option>
+        <option value="4">⭐⭐⭐⭐</option>
+        <option value="5">⭐⭐⭐⭐⭐</option>
+      </select>
+      <button type="submit">Add Win</button>
+    </form>
+
+    <div id="winsList"></div>
+    <button id="exportBtn">⬇️ Export to CSV</button>
+  </div>
+
+  <!-- Amplitude SDK -->
+  <script type="text/javascript">
+    !function(e,t){var n=e.amplitude||{_q:[],_iq:{}};function r(e,t){e.prototype[t]=function(){return this._q.push([t].concat(Array.prototype.slice.call(arguments,0))),this}}
+    var i=function(){return this._q=[],this};r(i,"init"),r(i,"logEvent"),e.amplitude=n;var s=t.createElement("script");
+    s.type="text/javascript",s.async=!0,s.src="https://cdn.amplitude.com/libs/amplitude-8.20.2-min.gz.js",
+    s.onload=function(){e.amplitude.runQueuedFunctions()},t.head.appendChild(s)}(window,document);
+    amplitude.getInstance().init("YOUR_API_KEY_HERE"); <!-- replace this -->
+  </script>
+
+  <script src="script.js"></script>
+</body>
+</html>
